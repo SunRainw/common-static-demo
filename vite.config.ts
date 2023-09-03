@@ -12,12 +12,12 @@ export default defineConfig({
     vue(),
     vueJsx(),
     Components({
-      extensions: ['vue'],
-      dts: 'src/components.d.ts',
+      extensions: ["vue"],
+      dts: "src/components.d.ts",
       resolvers: [
         AntDesignVueResolver({
           importStyle: false, // css in js
-          resolveIcons: true
+          resolveIcons: true,
         }),
       ],
     }),
@@ -25,6 +25,7 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": fileURLToPath(new URL("./src", import.meta.url)),
+      "~@": fileURLToPath(new URL("./src", import.meta.url)),
     },
   },
 });

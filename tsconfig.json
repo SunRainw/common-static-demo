@@ -4,7 +4,8 @@
     // "components.d.ts",
     "env.d.ts",
     "src/**/*",
-    "src/**/*.vue"
+    "src/**/*.vue",
+    "typings"
   ],
   "references": [{
       "path": "./tsconfig.node.json"
