@@ -6,12 +6,12 @@
       @mouseleave="handleMouseLeave"
     >
       <img :src="card" alt="" />
-      <a-float-button
-        @click="handleClick"
-        shape="circle"
-        :style="{ right: '50px' }"
-      />
     </div>
+    <a-float-button
+      @click="handleClick"
+      shape="circle"
+      :style="{ right: '50px' }"
+    />
   </div>
   <a-modal v-model:open="visible" title="实现分析" :footer="null">
     <p>

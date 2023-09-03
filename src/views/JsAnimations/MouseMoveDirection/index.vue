@@ -40,12 +40,13 @@ const handleClick = () => {
 };
 
 const handleMouseEnter = (e: MouseEvent) => {
-  const box = document.querySelector(".box-container");
+  console.info(e);
+  const box = document.querySelector(".box");
   if (!box) return;
   const rect = box.getBoundingClientRect();
   const baseDeg = Math.atan2(rect.height / 2, rect.width / 2); // 基准度数，以 Π（3.14） 计算@width
-  const x = e.clientX - rect.width / 2;
-  const y = rect.height / 2 - e.clientY; // 坐标轴方向和Y值方向相反
+  const x = e.offsetX - rect.width / 2;
+  const y = rect.height / 2 - e.offsetY; // 坐标轴方向和Y值方向相反
   const realDeg = Math.atan2(y, x);
   //以下注释以baseDeg = Π/4 为例
   if (realDeg < baseDeg && realDeg >= -baseDeg) {
@@ -81,7 +82,9 @@ const handleMouseLeave = () => {
   // display: fl;
 }
 .box {
+  padding: 0;
   position: relative;
+  border: 0;
   width: @width;
   height: @width;
   overflow: hidden;
