@@ -6,8 +6,26 @@
       @mouseleave="handleMouseLeave"
     >
       <img :src="card" alt="" />
+      <a-float-button
+        @click="handleClick"
+        shape="circle"
+        :style="{ right: '50px' }"
+      />
     </div>
   </div>
+  <a-modal v-model:open="visible" title="实现分析" :footer="null">
+    <p>
+      1. 设置x和y轴最大旋转范围，使用
+      <span class="light">perspective(500px)</span>
+      指定观察者与 z=0 平面的距离，使具有三维位置变换的元素产生透视效果
+    </p>
+    <p>2. 通过判断鼠标在容器中的位置，计算出卡片相对于最大值旋转的角度</p>
+    <p>
+      3: 使用
+      <span class="light">v-bind()</span>
+      绑定 <span class="light">rotateX和rotateY</span>的旋转角度
+    </p>
+  </a-modal>
 </template>
 <script setup lang="ts">
 import { ref, onBeforeMount } from "vue";
@@ -20,6 +38,10 @@ const getRotate = (range: readonly number[], value: number, max: number) =>
 
 const rx = ref<string>("0deg");
 const ry = ref<string>("0deg");
+const visible = ref<boolean>(false);
+const handleClick = () => {
+  visible.value = true;
+};
 const card = ref<string>("");
 onBeforeMount(() => {
   import("@/assets/images/cards/sun.jpg").then(({ default: url }) => {
@@ -63,5 +85,9 @@ const handleMouseLeave = () => {
       vertical-align: middle;
     }
   }
+}
+.light {
+  color: var(--light-color);
+  white-space: nowrap;
 }
 </style>
