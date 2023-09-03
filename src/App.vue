@@ -15,7 +15,7 @@ import { routerConfig } from "@/constants/routerConfig";
 <style scoped lang="less">
 .page-layout {
   display: grid;
-  grid-template-columns: 200px calc(100% - 200px);
+  grid-template-columns: 240px calc(100% - 240px);
   // width: 100%;
   .ant-menu {
     height: 100vh;

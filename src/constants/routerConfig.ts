@@ -13,6 +13,7 @@ export const routerConfig: RouteRecordRaw[] = [
   {
     name: "css",
     path: "/css",
+    redirect: "/css/fiveRing",
     meta: {
       title: "常见CSS效果",
       icon: "HighlightOutlined"
@@ -31,6 +32,7 @@ export const routerConfig: RouteRecordRaw[] = [
   {
     name: "jsAnimation",
     path: "/jsAnimation",
+    redirect: "/jsAnimation/mouseMoveDirection",
     meta: {
       title: "Js动画",
       icon: "HighlightOutlined"
@@ -54,4 +56,24 @@ export const routerConfig: RouteRecordRaw[] = [
       },
     ],
   },
+  {
+    name: "commonFunctions",
+    path: "/commonFuncs",
+    redirect: "/commonFuncs/fragmentUpload",
+    meta: {
+      title: "前端常见功能",
+      icon: "HighlightOutlined"
+    },
+    children: [
+      {
+        path: "/commonFuncs/fragmentUpload",
+        name: "fragmentUpload",
+        component: () => import("@/views/CommonFunctions/FragmentUpload/index.vue"),
+        meta: {
+          title: "分片上传"
+        }
+      },
+    ]
+
+  }
 ];

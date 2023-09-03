@@ -3,7 +3,7 @@
 <template>
   <div class="home-container">
     <div class="text">
-      <h1>动效demo & 技术实现</h1>
+      <h1>动效demo & 常见功能</h1>
       <p>效果展示、实现分析、实时更新。</p>
     </div>
   </div>
