@@ -40,7 +40,7 @@ jobs:
           git config --global user.email "1285328994@qq.com"
           git config --global user.name SunRainw
           git pull
-          curl -fsSL https://get.pnpm.io/install.sh | sh -
+          npm install pnpm -g
           rm -rf node_modules/
           pnpm i
           pnpm build
