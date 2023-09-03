@@ -43,7 +43,7 @@ jobs:
           pnpm i
           pnpm build
           git checkout gh-pages
-          cp -R public/* ./
+          cp -R dist/* ./
           git add .
           git commit -m "update"
           git push
