@@ -35,7 +35,7 @@ export const routerConfig: RouteRecordRaw[] = [
     redirect: "/jsAnimation/mouseMoveDirection",
     meta: {
       title: "Js动画",
-      icon: "HighlightOutlined"
+      icon: "SlackOutlined"
     },
     children: [
       {
@@ -62,7 +62,7 @@ export const routerConfig: RouteRecordRaw[] = [
     redirect: "/commonFuncs/fragmentUpload",
     meta: {
       title: "前端常见功能",
-      icon: "HighlightOutlined"
+      icon: "RadarChartOutlined"
     },
     children: [
       {

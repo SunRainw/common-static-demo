@@ -67,7 +67,7 @@ const columns = [
     title: "序号",
     dataIndex: "index",
     key: "index",
-    customRender: ({ index }) => index + 1,
+    customRender: ({ index }: {index: number}) => index + 1,
   },
   {
     title: "文件名",

@@ -1,4 +1,5 @@
-import { createChunk } from "./index";
+import { createChunk } from "./createChunk";
+
 
 onmessage = async (e) => {
   // 如果等待每次分片完成，耗费事件过多，可以使用promise.all同时进行分片，拿到最终的结果

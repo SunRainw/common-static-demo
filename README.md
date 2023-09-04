@@ -8,9 +8,10 @@
 
 目前包括的效果有
 
-1. 奥运五环实现
-2. 鼠标移入方向实现对应的背景移动
-3. 卡片旋转方向跟随鼠标移动方向旋转
+1. [奥运五环实现](https://sunrainw.github.io/common-static-demo/css/fiveRing)
+2. [鼠标移入方向实现对应的背景移动](https://sunrainw.github.io/common-static-demo/jsAnimation/mouseMoveDirection)
+3. [卡片旋转方向跟随鼠标移动方向旋转](https://sunrainw.github.io/common-static-demo/jsAnimation/mouseMoveRotate)
+4. [文件分片上传（包含webWorker多线程）](https://sunrainw.github.io/common-static-demo/commonFuncs/fragmentUpload)
 
 ## 项目地址
 
