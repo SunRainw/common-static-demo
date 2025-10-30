@@ -54,6 +54,14 @@ export const routerConfig: RouteRecordRaw[] = [
           title: "卡片跟随鼠标3D旋转"
         }
       },
+      {
+        path: "/jsAnimation/customCoffee",
+        name: "customCoffee",
+        component: () => import("@/views/JsAnimations/CustomCoffee/index.vue"),
+        meta: {
+          title: "自定义咖啡"
+        }
+      },
     ],
   },
   {
@@ -71,6 +79,14 @@ export const routerConfig: RouteRecordRaw[] = [
         component: () => import("@/views/CommonFunctions/FragmentUpload/index.vue"),
         meta: {
           title: "分片上传"
+        }
+      },
+      {
+        path: "/commonFuncs/dynamic_form",
+        name: "dynamic_form",
+        component: () => import("@/views/CommonFunctions/DynamicForm/index.vue"),
+        meta: {
+          title: "动态表单"
         }
       },
     ]
